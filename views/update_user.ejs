@@ -1,0 +1,48 @@
+
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+  <!-- Main Site -->
+  <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+           <div class="filter">
+               <a href="/"><i class="fas fa-angle-double-left"></i> Terug naar toetsvragen</a>
+           </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Verander de huidige vraag</h2>
+            <span class="text-light">Je kan hier de toetsvragen aanpassen</span>
+        </div>
+
+        <!-- add user form -->
+         <!-- form handling -->
+ <form method="POST" id="update_user">
+    <div class="new_user">
+        <div class="form-group">
+            <label for="gender" class="text-light">Juiste antwoord</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-4" name="status" value="Antwoord A" <%= user.status == 'Antwoord A' ? 'checked' : '' %> >
+                <label for="radio-4" class="radio-label">Antwoord A</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-5" name="status" value="Antwoord B" <%= user.status == 'Antwoord B' ? 'checked' : '' %> >
+                <label for="radio-5" class="radio-label">Antwoord B</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Opslaan</button>
+        </div>
+
+    </div>
+</form>
+       
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->
